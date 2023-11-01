@@ -25,6 +25,8 @@ t.forward(1000)
 t.up()
 
 #turtle.done()
+####  3nd comments 
+
 
 COLORS = ["beige", "coral", "gold", "blue", "green"]
 
