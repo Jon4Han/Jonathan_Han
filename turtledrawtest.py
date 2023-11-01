@@ -10,6 +10,7 @@ t.speed(0)
 t.color("black")
 
 # Draw the X-axis.
+##  comment 
 t.up()
 t.goto(-500, 0)
 t.down()
