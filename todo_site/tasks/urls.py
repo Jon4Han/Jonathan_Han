@@ -1,5 +1,11 @@
 
 from django.urls import path
+from django.http import HttpResponse
+#from .views import contact_view
+
+# urlpatterns = [
+#     path('tasks/', contact_view, name='contact'),
+# ]
 
 from .views import (
     TaskListView,

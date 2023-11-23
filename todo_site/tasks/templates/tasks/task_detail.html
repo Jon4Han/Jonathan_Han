@@ -2,12 +2,18 @@
 
 {% block content %}
 
-<h1>{{ task.name }}</h1>
-<p>{{ task.description }}</p>
-<p>Completed: {% if task.is_done %}Yes{% else %}No{% endif %}</p>
+<h1 style="font-size: 30px; color: blue;text-align:center;">Contact Detail </h1>
+<p>Name: {{ task.name }}</p>
+
+<p>Email: {{ task.email }}</p>
+
+<p>Notes: {{ task.notes }}</p>
+
+<p>Created Time: {{task.update_time}}</p>
+
 <br>
 <a class="btn btn-info" href="{% url 'task_list' %}" role="button">Home</a>
 <a class="btn btn-info" href="{% url 'task_update' task.pk %}" role="button">Edit</a>
 <a class="btn btn-info" href="{% url 'task_delete' task.pk %}" role="button">Delete</a>
-
+<p style="font-size: 20px; color:orange; text-align: center;">©️ Created by Joanthan Han </p>
 {% endblock content %}

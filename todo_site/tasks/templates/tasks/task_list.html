@@ -2,14 +2,16 @@
 
 {% block content %}
 
-<h1> Contact Management </h1>
-<a href="{% url 'task_create' %}">Create a New Contact</a>
+<h1 style="font-size: 30px; color: blue;text-align:center;">Contact Management </h1>
+<a href="{% url 'task_create' %}" class="btn btn-primary">Create a New Contact</a>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Task</th>
-      <th>Done?</th>
+      <th>             </th>
+      <th>Contact Name </th>
+      <th>Email</th>
+      <th>Created Time</th>
     </tr>
   </thead>
   <tbody>
@@ -24,16 +26,34 @@
           <i class="bi bi-trash"></i>
         </a>
         &nbsp;
+        <style>
+          table.task-table {
+              width: 100%;
+              table-layout: fixed;
+          }
+          th, td {
+              padding: 5px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+          }
+          th.name-column { width: 30%; }
+          th.email-column { width: 30%; }
+          th.update-time-column { width: 40%; }
+      </style>
+      
+      <td> {{ task.name }}</td>
+      <td> {{ task.email }}</td>
 
-        {{ task.name }}
+      <td>  {{ task.update_time}}</td>
       </td>
-      <td>
-        {% if task.is_done %}Yes{% else %}No{% endif %}
-      </td>
-
+      
+      
     </tr>
     {% endfor %}
   </tbody>
 </table>
+
+<p style="font-size: 20px; color:orange; text-align: center;">©️ Created by Joanthan Han </p>
 
 {% endblock content %}
