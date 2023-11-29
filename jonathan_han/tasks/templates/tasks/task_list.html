@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="font-size: 30px; color: blue;text-align:center;">Contact Management </h1>
+<a href="{% url 'task_create' %}" class="btn btn-primary">Create a New Contact</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>             </th>
+      <th>Contact Name </th>
+      <th>Email</th>
+      <th>Created Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in task_list %}
+    <tr>
+      <td>
+        <a class="icon-link" href="{% url 'task_detail' task.pk %}">
+          <i class="bi bi-receipt"></i> </a>
+        &nbsp;
+
+        <a class="icon-link" href="{% url 'task_delete' task.pk %}">
+          <i class="bi bi-trash"></i>
+        </a>
+        &nbsp;
+        <style>
+          table.task-table {
+              width: 100%;
+              table-layout: fixed;
+          }
+          th, td {
+              padding: 5px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+          }
+          th.name-column { width: 30%; }
+          th.email-column { width: 30%; }
+          th.update-time-column { width: 40%; }
+      </style>
+      
+      <td> {{ task.name }}</td>
+      <td> {{ task.email }}</td>
+
+      <td>  {{ task.update_time}}</td>
+      </td>
+      
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<p style="font-size: 20px; color:orange; text-align: center;">©️ Created by Joanthan Han </p>
+
+{% endblock content %}
