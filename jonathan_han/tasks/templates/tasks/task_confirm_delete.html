@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="font-size: 30px; color: blue;text-align:center;">Confirm Delete</h1>
+<p>Are you sure you want to delete contact "{{ task.name }}"?</p>
+<form method="post">
+  {% csrf_token %}
+  <button class="btn btn-danger" type="submit">Delete</button>
+  <a class="btn btn-info" href="{% url 'task_list' %}" role="button">Cancel</a>
+</form>
+<p style="font-size: 20px; color:orange; text-align: center;">©️ Created by Joanthan Han </p>
+{% endblock content %}
