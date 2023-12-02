@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="font-size: 30px; color: blue;text-align:center;">{% if mode == 'create' %}Create a Contact{% else %}Update Contact{% endif %} </h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <input type="submit" value="Submit" class="btn btn-primary" />
+  <a class="btn btn-info" href="{% url 'task_list' %}" role="button">Cancel</a>
+
+</form>
+<p style="font-size: 20px; color:orange; text-align: center;">©️ Created by Joanthan Han </p>
+{% endblock content %}
+
