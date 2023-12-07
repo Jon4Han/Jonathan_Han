@@ -1,5 +1,8 @@
 # Jonathan_Han  
 Please find attached screencopy of each function of the CRUD . 
+
+<img width="1137" alt="image" src="https://github.com/Jon4Han/Jonathan_Han/assets/133595832/8c460b3c-cac0-4d63-991c-05ce9a23954e">
+
 <img width="1321" alt="image" src="https://github.com/Jon4Han/Jonathan_Han/assets/133595832/bb7d257a-c0b1-44d0-b056-2cf7bfa1b5f0">
 
 <img width="1345" alt="image" src="https://github.com/Jon4Han/Jonathan_Han/assets/133595832/46981eae-6095-46d2-829a-05383ffec098">
